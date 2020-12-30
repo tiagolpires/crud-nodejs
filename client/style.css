@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    font-size: 62.5%;
+}
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.create-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 30px 0;
+}
+.create-form input, .edit-form input{
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 5px 20px;
+    outline: none;
+}
+.create-form button, .edit-form button{
+    margin-left: 20px;
+    border-radius: 20px;
+    border: none;
+    padding: 5px 40px;
+    color: #ffffff; 
+    background: linear-gradient(135deg, #686DE0 0%, #4834D4 100%);
+    box-shadow: 0px 4px 20px 0px rgba(104,109,224,0.5);
+    cursor: pointer;
+    outline: none;
+
+}
+.create-form button:hover, .edit-form button:hover{
+    transform: scale(1.1);
+}
+.card{
+    padding: 20px 0px;
+    width: 90vw;
+    max-width: 600px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin: 20px 0px;
+    box-shadow: 0px 4px 20px 0px rgba(104,109,224,0.5);
+    background: linear-gradient(135deg, #686DE0 0%, #4834D4 100%);
+    color: #ffffff;
+}
+
+.card-edit{
+    display: flex;
+    margin-top: 20px;
+}
+.card-edit div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    margin: 0px 10px;
+    transition: all ease-in-out .2s;
+    cursor: pointer;
+}
+.card-edit div:hover{
+    background-color: #ff7474;
+}
+.edit-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px 40px 40px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+.modal{
+    display: none;
+}
+.modal.on{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-button{
+    font-size: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin: 10px 0px 10px 0px;
+}
+
+@media(max-width: 420px){
+    .edit-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .edit-button, .create-form button{
+        margin-left: 0px; 
+        margin-top: 20px;
+    }
+    .create-form{
+        flex-direction: column;
+        margin: 40px 0 20px 0;
+    }
+}
